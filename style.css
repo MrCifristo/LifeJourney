@@ -42,11 +42,6 @@ body {
     background-color: #00C853;
   }
 
-  .username {
-    width: 30px;
+  .username, .password {
+    width: 200px;
   }
-
-  .password {
-    width: 30px;
-  }
-  
