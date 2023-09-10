@@ -43,6 +43,10 @@ body {
   }
 
   .username {
-    padding: 30px;
+    width: 30px;
+  }
+
+  .password {
+    width: 30px;
   }
   
