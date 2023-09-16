@@ -1,27 +1,32 @@
-
 <!DOCTYPE html>
 <html>
 <head>
-<title>Login and Sign Up Page</title>
+<title>Login Page</title>
 <link rel="stylesheet" href="style.css">
 </head>
 <body>
 <h1>Login</h1>
 <form action="login.php" method="post">
-<label for="username" class="username">Username:</label>
-<input type="text" name="username" id="username" class="green">
-<label for="password" class="password">Password:</label>
-<input type="password" name="password" id="password" class="green">
+<input type="email" name="email" placeholder="Email">
+<input type="password" name="password" placeholder="Password">
 <input type="submit" value="Login">
 </form>
 <h2>Sign Up</h2>
+<<<<<<< HEAD
 <form action="signup.php" method="post">
 <label for="email">Email:</label>
 <input type="email" name="email" id="email">
 <label for="confirm_password">Confirm Password:</label>
 <input type="confirm password" name="confirm_password" id="confirm_password">
+=======
+<form action="insert_signups.php" method="post">
+<input type="text" name="first_name" placeholder="First Name">
+<input type="text" name="last_name" placeholder="Last Name">
+<input type="email" name="email" placeholder="Email">
+<input type="password" name="password" placeholder="Password">
+<input type="password" name="confirm_password" placeholder="Confirm Password">
+>>>>>>> 0221f681a3acf60fc7a30e36a9a3ca7696ecfb74
 <input type="submit" value="Sign Up">
 </form>
 </body>
 </html>
-
