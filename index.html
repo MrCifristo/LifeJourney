@@ -14,15 +14,6 @@
 <input type="submit" value="Login">
 </form>
 <h2>Sign Up</h2>
-<form action="signup.php" method="post">
-<label for="email" class="username" style="text-align: left;">Email:</label>
-<input type="email" name="email" id="email">
-<label for="password" class="password" style="text-align: left;">Password:</label>
-<input type="password" name="password" id="password" style="width: 200px;">
-<label for="confirm_password" class="password" style="text-align: left;">Confirm Password:</label>
-<input type="password" name="confirm_password" id="confirm_password" style="width: 200px;">
-<input type="submit" value="Sign Up">
-
 <form action="insert_signups.php" method="post">
     <input type="text" name="first_name" placeholder="First Name">
     <input type="text" name="last_name" placeholder="Last Name">
@@ -37,3 +28,5 @@
 <script>
     var firebaseApp = firebase.initializeApp({firebase_config_path:"firebase.json"});
   </script>
+
+
