@@ -1,17 +1,14 @@
-
 <!DOCTYPE html>
 <html>
 <head>
-<title>Login and Sign Up Page</title>
+<title>Login Page</title>
 <link rel="stylesheet" href="style.css">
 </head>
 <body>
 <h1>Login</h1>
 <form action="login.php" method="post">
-<label for="username" class="username">Username:</label>
-<input type="text" name="username" id="username">
-<label for="password" class="password">Password:</label>
-<input type="password" name="password" id="password" >
+<input type="email" name="email" placeholder="Email">
+<input type="password" name="password" placeholder="Password">
 <input type="submit" value="Login">
 </form>
 <h2>Sign Up</h2>
@@ -21,8 +18,7 @@
 <input type="email" name="email" placeholder="Email">
 <input type="password" name="password" placeholder="Password">
 <input type="password" name="confirm_password" placeholder="Confirm Password">
-<input type="submit" value="Sign Up" class = "btn-submit">
+<input type="submit" value="Sign Up" class="btn-submit">
 </form>
 </body>
 </html>
-
