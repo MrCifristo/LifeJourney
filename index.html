@@ -15,12 +15,13 @@
 <input type="submit" value="Login">
 </form>
 <h2>Sign Up</h2>
-<form action="signup.php" method="post">
-<label for="email">Email:</label>
-<input type="email" name="email" id="email">
-<label for="confirm_password">Confirm Password:</label>
-<input type="confirm password" name="confirm_password" id="confirm_password">
-<input type="submit" value="Sign Up">
+<form action="insert_signups.php" method="post">
+<input type="text" name="first_name" placeholder="First Name">
+<input type="text" name="last_name" placeholder="Last Name">
+<input type="email" name="email" placeholder="Email">
+<input type="password" name="password" placeholder="Password">
+<input type="password" name="confirm_password" placeholder="Confirm Password">
+<input type="submit" value="Sign Up" class = "btn-submit">
 </form>
 </body>
 </html>
