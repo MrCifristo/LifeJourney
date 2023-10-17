@@ -1,52 +1,208 @@
-body {
-    background-color: #E0F3F9;
-    color: #444;
-  }
-  
-  h1 {
-    color: #444;
-    font-size: 2em;
-    font-weight: bold;
-  }
-  
-  form {
-    width: 500px;
-    margin: 0 auto;
-    background-color: #FFF;
-    border-radius: 10px;
-  }
-  
-  label {
-    font-size: 1em;
-    margin-bottom: 10px;
-  }
-  
-  input {
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+
+body{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    background: url(background.jpeg) no-repeat;
+    background-size: cover;
+    background-position: center
+
+}
+
+
+
+header{
+    position: fixed;
+    top: 0;
+    left: 0;
     width: 100%;
+    padding: 20px 100px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    z-index: 99;
+}
+.logo{
+    font: 2em;
+    color: #fff;
+    user-select: none;
+}
+/*
+.navigation a{
+    position: relative;
+    font-size: 1.1em;
+    color: #fff;
+    text-decoration: none;
+    font-weight: 500;
+    margin-left: 30px;
+
+}*/
+.navigation a{
+    width: 130px;
+    height: 50px;
+    background: transparent;
+    border: 2px solid #fff;
+    outline: none;
+    border-radius: 6px;
+    cursor: pointer;
+    font-size: 1.1em;
+    color: #fff;
+    font-weight: 500;
+    margin-left: 30px;
+    transition: .5s;
     padding: 10px;
-    border: 1px solid #444;
+    text-decoration: none;
+}
+/*
+.navigation a::after{
+    content: "";
+    position: absolute;
+    left: 0;
+    bottom: -6px;
+    width: 100%;
+    height:3px;
+    background: #fff;
     border-radius: 5px;
-  }
-  
-  input[type="submit"] {
-    background-color: #444;
-    color: #FFF;
+    transform-origin: right;
+    transform: scaleX(0);  
+    transition: transform .5s;   
+}*/
+.navigation a:hover{
+    background: #fff;
+    color: #162938;
+    
+}
+
+.navigation .btnLogin-popup{
+    width: 130px;
+    height: 50px;
+    background: transparent;
+    border: 2px solid #fff;
+    outline: none;
+    border-radius: 6px;
+    cursor: pointer;
+    font-size: 1.1em;
+    color: #fff;
+    font-weight: 500;
+    margin-left: 30px;
+    transition: .5s;
+}
+.navigation .btnLogin-popup:hover{
+    background: #fff;
+    color: #162938;
+}
+
+.wrapper{
+    position: relative;
+    width: 400px;
+    height: 400px;
+    background: transparent;
+    border: 2px solid #fff;
+    border-radius: 20px;
+    backdrop-filter: blur(20px);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+.wrapper .form-box{
+    width: 100%;
+    padding: 40px;
+
+}
+.form-box h2 {
+    font-size:2em;
+    color: #ffffff;
+    text-align: center;
+
+}
+.input-box{
+    position: relative;
+    width: 100%;
+    height: 50px;
+    border-bottom: 2px solid #162938;
+    margin: 30px 0;
+
+}
+.input-box label {
+    position: absolute;
+    top: 50%;
+    left: 5px;
+    transform: translateY(-50%);
+    font-size: 1em;
+    color: #162938;
+    font-weight: 500;
+    pointer-events: none;
+    transition: .5s;
+}
+
+
+.input-box input:focus~label,
+.input-box input:valid~label{
+    top: -2px;
+} /* Esto deberia hacer que lo de email se pusiera encima de la textbox y luego deberia moverse hacia arriba
+
+/* La textbox*/
+.input-box input{
+    width: 100%;
+    height: 100%;
+    background: transparent;
+    border: none;
+    outline: none;
+    font-size: 1em;
+    color: #fff;
+    font-weight: 600;
+    padding: 0 35px 0 5px;
+}
+
+.input-box .icon{
+    position: absolute;
+    right: 8px;
     font-size: 1.2em;
-    font-weight: bold;
-    padding: 10px 20px;
-    border: 0;
-  }
-  
-  .green {
-    color: #444;
-    background-color: #00C853;
-  }
+    color: #162938;
+    line-height: 57px;
+}
 
-  .username {
-    width: 30px;
-  }
+/* Estp lo que mueve es el checbox y forgot password*/
+.remember-forgot  {
+    font-size: 1em;
+    color: #162938;
+    font-weight: 500;
+    margin: -15px 0 15px;
+    display: flex;
+    justify-content: space-between;
+    margin-right: 10px;
+}
+.remember-forgot label input{
+    accent-color: #162938;
+    margin-right: 10px;
+}
+.remember-forgot a{
+    color: #162938;
+    text-decoration: none;
+}
+.remember-forgot a:hover {
+    text-decoration: underline;
+}
 
-  .password {
-    width: 30px;
-  }
-  
+/* Este es el boton de login */
+.btn {
+    width: 100%;
+    height: 45px;
+    background: #fff;
+    border: none;
+    outline: none;
+    border-radius: 6px;
+    cursor: pointer;
+    font-size: 1em;
+    color: #162938;
+    font-weight: 500;
+
+}
