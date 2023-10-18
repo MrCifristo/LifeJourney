@@ -10,7 +10,8 @@ body{
     justify-content: center;
     align-items: center;
     min-height: 100vh;
-    background: url(background.jpeg) no-repeat;
+    background-repeat: no-repeat;
+    background-image: url(fondo.png);
     background-size: cover;
     background-position: center
 
@@ -34,7 +35,7 @@ header{
     color: #fff;
     user-select: none;
 }
-/*
+
 .navigation a{
     position: relative;
     font-size: 1.1em;
@@ -43,7 +44,9 @@ header{
     font-weight: 500;
     margin-left: 30px;
 
-}*/
+}
+
+/*
 .navigation a{
     width: 130px;
     height: 50px;
@@ -59,10 +62,10 @@ header{
     transition: .5s;
     padding: 10px;
     text-decoration: none;
-}
-/*
+}*/
+
 .navigation a::after{
-    content: "";
+    content: '';
     position: absolute;
     left: 0;
     bottom: -6px;
@@ -73,10 +76,11 @@ header{
     transform-origin: right;
     transform: scaleX(0);  
     transition: transform .5s;   
-}*/
-.navigation a:hover{
-    background: #fff;
-    color: #162938;
+}
+
+.navigation a:hover::after{
+    transform: scaleX(1);
+    transform-origin: left;
     
 }
 
@@ -205,4 +209,10 @@ header{
     color: #162938;
     font-weight: 500;
 
+}
+
+.login-register{
+    font-size: .9em;
+
+;
 }
