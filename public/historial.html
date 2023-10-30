@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Historial</title>
+    <style>
+        body {
+            background-color: black;
+            color: white;
+            font-family: Arial, sans-serif;
+            padding: 20px;
+            text-align: center;
+        }
+
+        .historial {
+            list-style-type: none;
+            padding: 0;
+            max-width: 600px;
+            margin: auto;
+            background-color: rgba(0, 0, 0, 0.7);
+            border-radius: 10px;
+            border: 2px solid #444;
+            text-align: left;
+            padding: 10px;
+        }
+
+        .actividad {
+            margin-bottom: 10px;
+        }
+
+        .timestamp {
+            font-style: italic;
+            color: #999;
+        }
+
+        .agregar-btn {
+            background-color: #1E90FF;
+            color: white;
+            border: none;
+            padding: 10px 20px;
+            font-size: 16px;
+            cursor: pointer;
+            border-radius: 5px;
+            margin-top: 20px;
+            transition: background-color 0.3s;
+        }
+
+        .agregar-btn:hover {
+            background-color: #0078D4;
+        }
+    </style>
+</head>
+<body>
+
+    <h1>Historial de Usuario</h1>
+
+    <ul class="historial" id="historial">
+        <li class="actividad">Actividad 1 - <span class="timestamp">2023-10-30 10:00:00</span></li>
+        <li class="actividad">Actividad 2 - <span class="timestamp">2023-10-30 11:30:00</span></li>
+        <li class="actividad">Actividad 3 - <span class="timestamp">2023-10-30 14:45:00</span></li>
+    </ul>
+
+    <button class="agregar-btn" onclick="agregarActividad()">Agregar Actividad</button>
+
+    <script>
+        function agregarActividad() {
+            var actividad = prompt("Introduce una nueva actividad:");
+            if (actividad) {
+                var historial = document.getElementById("historial");
+                var nuevaActividad = document.createElement("li");
+                nuevaActividad.className = "actividad";
+                nuevaActividad.textContent = actividad + " - " + obtenerTimestamp();
+                historial.appendChild(nuevaActividad);
+            }
+        }
+
+        function obtenerTimestamp() {
+            var ahora = new Date();
+            var year = ahora.getFullYear();
+            var month = ahora.getMonth() + 1; 
+            var day = ahora.getDate();
+            var hours = ahora.getHours();
+            var minutes = ahora.getMinutes();
+            var seconds = ahora.getSeconds();
+
+            return `${year}-${pad(month)}-${pad(day)} ${pad(hours)}:${pad(minutes)}:${pad(seconds)}`;
+        }
+
+        function pad(number) {
+            return (number < 10 ? '0' : '') + number;
+        }
+    </script>
+
+</body>
+</html>
