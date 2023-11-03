@@ -6,7 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Historial de usuario:</title>
     <style>
-     body {
+        body {
             background-color: black;
             color: white;
             font-family: Arial, sans-serif;
@@ -47,6 +47,18 @@
             padding: 8px;
             font-size: 16px;
         }
+
+        .ranking {
+            background-color: #504e4a;
+            padding: 10px;
+            margin-top: 20px;
+            border-radius: 5px;
+        }
+
+        .ranking .actividad {
+            margin-bottom: 5px;
+            font-weight: bold;
+        }
     </style>
 </head>
 
@@ -66,8 +78,8 @@
         <button onclick="detenerActividad()">Detener</button>
     </div>
 
-    <h2>Top de Mejores Tiempos</h2>
-    <div id="topTiempo">
+    <div class="ranking" id="topTiempo">
+        <h2>Top de Mejores Tiempos</h2>
         <!-- Aquí se mostrarán los mejores tiempos -->
     </div>
 
@@ -135,9 +147,9 @@
             var topTiempo = document.getElementById("topTiempo");
             topTiempo.innerHTML = ""; // Limpiar contenido anterior
 
-            // Ordenar historialActividades por duración
+            // Ordenar historialActividades por duración (de mayor a menor)
             historialActividades.sort(function(a, b) {
-                return a.duracion.localeCompare(b.duracion);
+                return b.duracion.localeCompare(a.duracion);
             });
 
             // Mostrar los mejores tiempos
@@ -145,7 +157,7 @@
                 var actividad = historialActividades[i];
                 var nuevaActividad = document.createElement("div");
                 nuevaActividad.className = "actividad";
-                nuevaActividad.innerHTML = actividad.usuario + ": " + actividad.actividad + " - Duración: " + actividad.duracion;
+                nuevaActividad.innerHTML = (i + 1) + ". " + actividad.usuario + ": " + actividad.actividad + " - Duración: " + actividad.duracion;
                 topTiempo.appendChild(nuevaActividad);
             }
         }
@@ -154,5 +166,3 @@
 </body>
 
 </html>
-
-
