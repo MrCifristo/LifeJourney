@@ -73,11 +73,11 @@
 
             <div class="form-box register">
                 <h2>Registration</h2>
-                <form action="#"></form>
-                <div class="input-box">
+                <form action="#" id ='regiForm'>
+                <!-- <div class="input-box">
                     <span class="icon"><ion-icon name="person-circle-outline"></ion-icon></span>
-                    <input type="text" required> <label>Username</label>
-                </div>
+                    <input type="text" id= 'username1'required> <label>Username</label>
+                </div> -->
                 <div class="input-box">
                     <span class="icon"><ion-icon name="mail-outline"></ion-icon></span>
                     <input type="email" id="email1" required> <label>Email</label>
@@ -98,6 +98,7 @@
                     </p>
                 </div>
             </div>
+        </form>
 
 
         </div>
@@ -113,8 +114,13 @@
         <script src="js/animations.js"></script>
         <script src="js/login.js"></script>
         <script src="https://unpkg.com/ionicons@latest/dist/ionicons.js"></script>
+        
 
         <script>
+            var users = [
+                { username: 'javicaniz@gmail.com', password: '1234' },
+                { username: 'user1', password: 'password456' }
+              ];
             // JavaScript code to handle the login form submission
             const loginForm = document.getElementById('loginForm');
             loginForm.addEventListener('submit', (event) => {
@@ -124,22 +130,36 @@
               const password = document.getElementById('password').value;
         
               // Simulate checking user credentials against a stored list of users
-              const users = [
-                { username: 'javicaniz@gmail.com', password: '1234' },
-                { username: 'user1', password: 'password456' }
-              ];
+              
         
               const validUser = users.find(user => user.username === username && user.password === password);
         
               if (validUser) {
                 // alert('Login successful!');
-                // window.location.href = 'timer.html';
+                window.location.href = 'timer.html';
 
                 // Redirect to a protected page or perform other actions upon successful login
               } else {
                 alert('Invalid username or password');
               }
             });
+
+            const regiForm = document.getElementById('regiForm');
+            regiForm.addEventListener('submit', (event) =>{
+                event.preventDefault();
+
+                // const userName = document.getElementById('username1').value;
+                const password = document.getElementById('password1').value;
+                const username = document.getElementById('email1').value;
+
+                const newUser = {username,password};
+                users.push(newUser);
+                alert('Registration successful!');
+                
+
+
+            });
+            
           </script>
 
     </body>
