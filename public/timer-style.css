@@ -1,5 +1,19 @@
 @import url('https://fonts.googleapis.com/css2?family=Sometype+Mono&display=swap');
 
+
+.header {
+    background-color: #007bff;
+    color: white;
+    padding: 20px;
+    display: flex;
+}
+
+.home-link {
+    text-decoration: none;
+    color: white;
+    font-weight: bold;
+    font-size: 18px;
+}
 body{
     display: flex;
     justify-content: center;
