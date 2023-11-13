@@ -4,16 +4,15 @@
 # https://aka.ms/yaml
 
 trigger:
-- main
+  - main
+
+resources:
+  - repo: self
 
 pool:
-  vmImage: ubuntu-latest
+  vmImage: 'ubuntu-latest'
 
 steps:
-- script: echo Hello, world!
-  displayName: 'Run a one-line script'
-
-- script: |
-    echo Add other tasks to build, test, and deploy your project.
-    echo See https://aka.ms/yaml
-  displayName: 'Run a multi-line script'
+  - script: |
+      docker build -t milbtonb18/lifejourney:1.0 .
+    displayName: 'Construir imagen Docker'
