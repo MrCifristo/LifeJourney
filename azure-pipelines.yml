@@ -19,6 +19,11 @@
 #   displayName: 'Run a multi-line script' 
   
 # Repo: MySpace/TemplateRepo
+- task: DockerCompose@0
+  inputs:
+    containerregistrytype: 'Azure Container Registry'
+    dockerComposeFile: '**/docker-compose.yml'
+    action: 'Run a Docker Compose command'
 # File: azure-pipeline.yml
 
 name: cicd_ci
