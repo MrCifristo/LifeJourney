@@ -10,9 +10,9 @@ resources:
   - repo: self
 
 pool:
-  name: LifeJourney
+  vmImage: 'ubuntu-latest'
 
 steps:
   - script: |
       docker build -t milbtonb18/lifejourney:1.0 .
-    displayName: 'Construir imagen Docker
+    displayName: 'Construir imagen Docker'
