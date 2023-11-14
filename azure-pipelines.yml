@@ -13,5 +13,5 @@ steps:
     displayName: 'Construir imagen Docker'
 
   - script: |
-      docker run -d --name lifejourney-container -p 8080:80 milbtonb18/lifejourney:1.0
+      docker run -d --name lifejourney-container -p 8090:80 milbtonb18/lifejourney:1.0
     displayName: 'Ejecutar contenedor Docker'
