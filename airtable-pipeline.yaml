@@ -1,5 +1,5 @@
 trigger:
-  - main  # Asume que deseas desencadenar la pipeline en commits a la rama 'main'
+  - milton-development  # Asume que deseas desencadenar la pipeline en commits a la rama 'main'
 
 pool:
   name: LifeJourney
