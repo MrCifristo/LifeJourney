@@ -15,7 +15,7 @@ function cargarDatosDeAirtable(apiKey, baseId, tableName, callback) {
 document.addEventListener('DOMContentLoaded', function() {
     const apiKey = 'TU_API_KEY'; // Reemplaza con tu API key real
     const baseId = 'apphA4dkXJZdMjb68'; // Reemplaza con tu Base ID real
-    const tableName = 'shrFk9dYyfIZTO4aA'; // Reemplaza con tu Table Name real
+    const tableName = 'Life Journey'; // Reemplaza con tu Table Name real
 
     cargarDatosDeAirtable(apiKey, baseId, tableName, (data) => {
         const datosElement = document.getElementById('datos');
